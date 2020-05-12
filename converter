@@ -1,0 +1,22 @@
+<script>
+function decToHex(c){ 
+    return (c).toString(16).toUpperCase();
+}
+
+function output(){
+    var numBox = [];
+    var question = prompt("Enter a number between 1-16 and press ok");
+    
+    if(question >= 1 && question <= 16){ 
+        for(var i = 1; i <= question ; i++){
+                numBox.push(decToHex(i));
+            }
+            numBox = numBox.join(" "); 
+            document.write(numBox); 
+        
+        } else {
+        document.write("<h4 style=color:red;>ERROR! Your desired number must be between 1 and 16. Try agin please.</h4>"); 
+        }
+}
+output(); 
+</script>
